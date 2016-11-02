@@ -1,0 +1,374 @@
+/*align Start*/
+.vat {
+  &,
+  &_ > * {
+    vertical-align: top;
+  }
+}
+
+.vab {
+  &,
+  &_ > * {
+    vertical-align: bottom;
+  }
+}
+
+.vam {
+  &,
+  &_ > * {
+    vertical-align: middle;
+  }
+}
+/*align End*/
+
+/*background Start*/
+.bgn{
+  background: none!important;
+}
+/*background End*/
+
+/* border Start*/
+
+.bdn{
+  border:none;
+}
+.bd0{
+  border:0;
+}
+.bd0n{
+  border:0 none;
+}
+.bcc{
+  border-collapse: collapse;
+}
+
+/* border End*/
+
+/**clearfix Start**/
+/**
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ * 3. Reference:http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clfix:before,
+.clfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clfix:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clfix {
+  *zoom: 1;
+}
+
+
+/*normal way to clearfix*/
+//http://snipplr.com/view/43074/clearfix-using-zerowidthspace-character/
+.clearfix:after {
+  clear: both;
+  content: "\200B";
+  display: block;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/**clearfix  End**/
+
+.dib{
+  &,
+  &_>*{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+}
+
+.dtb{
+  display: table;
+}
+
+.dtbr{
+  display: table-row;
+}
+
+.dtbc{
+  &,
+  &_>*{
+    display: table-cell;
+    *display: inline-block;
+    *zoom: 1;
+  }
+}
+.db{
+  &,
+  &_>*{
+    display: block;
+  }
+}
+
+.dn,
+[hidden]{
+  display: none;
+}
+
+
+.z{
+  &,
+  &_>*{
+    zoom:1;
+  }
+}
+
+/**float Start**/
+.l{
+  &,
+  &_>*{
+    float: left;
+  }
+}
+
+.r{
+  &,
+  &_>*{
+    float: right;
+  }
+}
+
+
+
+.lfix_ {
+  @extend .clfix;
+  & > * {
+    float: left;
+  }
+}
+.rfix {
+  @extend .clfix;
+  & > * {
+    float: right;
+  }
+}
+/**float  End**/
+
+/**font Start**/
+.b {
+  font-weight: bold;
+}
+
+.n {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.f0 {
+  font-size: 0;
+}
+/**font  End**/
+
+/**height Start**/
+
+.h0 {
+  height: 0 !important;
+}
+
+.max-h100 {
+  max-height: 100%;
+}
+
+.min-h100 {
+  min-height: 100%;
+}
+
+/**height  End**/
+
+/* margin Start */
+.auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.m0a {
+  margin: 0 auto;
+}
+
+/* margin End */
+
+/**overflow Start**/
+.ovh {
+  overflow: hidden;
+}
+
+.ovv {
+  overflow: visible;
+}
+
+.ovs {
+  overflow: scroll;
+}
+
+.ova {
+  overflow: auto;
+}
+
+.oz {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/**overflow  End**/
+
+/**position Start**/
+
+.abs{
+  &,
+  &_>*{
+    position: absolute;
+  }
+}
+
+
+.rel{
+  position: relative;
+}
+
+
+.fixed{
+  position: fixed;
+}
+
+
+.trbl0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.lr0{
+  left:0;
+  right:0;
+}
+.tb0{
+  top:0;
+  bottom:0;
+}
+.t0 {
+  top: 0;
+}
+
+.r0 {
+  right: 0;
+}
+
+.b0 {
+  bottom: 0;
+}
+
+.l0 {
+  left: 0;
+}
+
+.t5 {
+  top: 50%;
+}
+
+.r5 {
+  right: 50%;
+}
+
+.b5 {
+  bottom: 50%;
+}
+
+.l5 {
+  left: 50%;
+}
+
+.t100 {
+  top: 100%;
+}
+
+.r100 {
+  right: 100%;
+}
+
+.b100 {
+  bottom: 100%;
+}
+
+.l100 {
+  left: 100%;
+}
+/**position  End**/
+
+/**radius Start**/
+.radius-top-0 {
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+}
+
+.radius-right-0 {
+  border-top-right-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
+
+.radius-bottom-0 {
+  border-bottom-left-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
+
+.radius-left-0 {
+  border-bottom-left-radius: 0!important;
+  border-top-left-radius: 0!important;
+}
+
+.circle {
+  border-radius: 50%!important;
+}
+
+.rect{
+  border-radius:0!important;
+}
+/**radius  End**/
+
+/**width Start**/
+.w0 {
+  width: 0;
+}
+
+.w100{
+  width:100%;
+}
+.h100{
+  height:100%;
+}
+.wh100{
+  @extend .w100,.h100;
+}
+.max-w100 {
+  max-width: 100%;
+}
+
+.min-w100 {
+  min-width: 100%;
+}
+/**width  End**/
